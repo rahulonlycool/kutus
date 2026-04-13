@@ -1,0 +1,113 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Backgrounds */
+.intro {
+  background: url('background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: fadeIn 2s ease-in;
+}
+
+.about {
+  background: url('background2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: fadeIn 2s ease-in;
+}
+
+.game {
+  background: #111;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Content Box */
+.content {
+  background-color: rgba(0,0,0,0.6);
+  padding: 40px;
+  margin: 80px auto;
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  animation: slideUp 1s ease-out;
+}
+
+/* Headings */
+h1, h3 {
+  animation: glowText 2s infinite alternate;
+}
+
+/* Navigation Links */
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: #fffacd;
+}
+
+/* Buttons */
+.button {
+  padding: 15px 30px;
+  margin: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.yes {
+  background-color: crimson;
+  color: white;
+  box-shadow: 0 0 15px rgba(220,20,60,0.7);
+}
+
+.no {
+  background-color: seagreen;
+  color: white;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(46,139,87,0.7);
+  transition: left 0.3s ease, top 0.3s ease;
+}
+
+/* Final Screen */
+#final {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #ffd700; }
+  to { text-shadow: 0 0 20px #ff69b4; }
+}

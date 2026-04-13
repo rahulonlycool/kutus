@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yes/No Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    .content {
+      margin-top: 100px;
+    }
+    .button {
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: crimson;
+      color: white;
+    }
+    .no {
+      background-color: seagreen;
+      color: white;
+      position: absolute;
+    }
+    #final {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- MAIN SCREEN -->
+  <div id="main" class="content">
+    <h3>Bhalobasho toh amay? 🥺</h3>
+    <button class="button no" id="noBtn">No 💔 </button>
+    <button class="button yes" onclick="yesClick()">Yes ❤️ </button>
+  </div>
+
+  <!-- FINAL SCREEN -->
+  <div id="final">
+    <h1>😭❤️ Jani Ami Kuchu ❤️</h1>
+    <p>Amio onek bhalobashi and i promise ami kokhono chere jabona tomay cause ami parboina Tomar theke doore amio thakte parina din raat kadi ar tomay miss kori 💕</p>
+    <nav>
+      <a href="index.html" style="color:gold;">Back to Start</a>
+    </nav>
+  </div>
+
+  <script>
+    // YES CLICK
+    function yesClick() {
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('final').style.display = 'flex';
+    }
+
+    // NO BUTTON ESCAPE
+    const noBtn = document.getElementById('noBtn');
+    noBtn.addEventListener('mouseover', move);
+    noBtn.addEventListener('click', move);
+
+    function move() {
+      noBtn.style.left = Math.random() * 300 + 'px';
+      noBtn.style.top = Math.random() * 500 + 'px';
+    }
+  </script>
+</body>
+</html>
